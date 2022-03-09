@@ -32,7 +32,9 @@ for key, val in df.items():
     print(val)
 '''
 
-lst = [1, 3, 5, 7, 9, 11, 23, 55, 77]
-for i, val in enumerate(lst):
-    print(i, val)
-    i += 3
+'''
+while True:
+    print(collector.get_real_time_data("SH600519"))
+    time.sleep(5)
+'''
+print(time.time())

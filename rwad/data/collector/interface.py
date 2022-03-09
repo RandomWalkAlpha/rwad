@@ -201,10 +201,9 @@ class DataCollector(Collector):
 
     def get_real_time_data(self, code: str) -> Optional[Series]:
         """
-        Return real time trading data with specific stock, this interface can request once
-        every 10 seconds at the fastest. If now time is not opening period, this would return
-        latest valid data. If you want to get more than one stock data at one time, please use
-        get_batch_real_time_data() instead.
+        Return real time trading data with specific stock, this interface can be called every 5 seconds
+        at the fastest. If now time is not opening period, this would return latest valid data.
+        If you want to get more than one stock data at one time, please use get_batch_real_time_data() instead.
         :param code: stock code, eg: SH600519, SZ399001
         :return: latest stock data string
         """
