@@ -10,7 +10,7 @@ class Bill:
         self.timestamp = timestamp
 
     def exact(self):
-        return self.code, self.price, self.share, self.timestamp
+        return self.code, self.transaction_price, self.share, self.timestamp
 
 
 class Holding:
@@ -70,7 +70,6 @@ class Position:
                 self.bills.append(Bill(code, fixed_price, share))
             self.total_assets -= (fixed_price - price) * share
             self.update()
-
 
     def sell(self, operations: List[Bill]):
         pass
